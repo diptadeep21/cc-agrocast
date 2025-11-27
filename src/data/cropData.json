@@ -1,0 +1,39 @@
+[
+  {
+    "crop": "Wheat",
+    "sowingTemperatureRange": [10, 25],
+    "rainTolerance": "medium",
+    "notes": "Avoid heavy rain during flowering."
+  },
+  {
+    "crop": "Rice",
+    "sowingTemperatureRange": [20, 35],
+    "rainTolerance": "high",
+    "notes": "Prefer flooded fields after transplanting."
+  },
+  {
+    "crop": "Maize",
+    "sowingTemperatureRange": [15, 30],
+    "rainTolerance": "medium",
+    "notes": "Requires consistent moisture during tasseling."
+  },
+  {
+    "crop": "Potato",
+    "sowingTemperatureRange": [10, 20],
+    "rainTolerance": "low",
+    "notes": "Avoid waterlogging. Well-drained soil preferred."
+  },
+  {
+    "crop": "Tomato",
+    "sowingTemperatureRange": [18, 30],
+    "rainTolerance": "low",
+    "notes": "Protect from heavy rain to prevent disease."
+  },
+  {
+    "crop": "Sugarcane",
+    "sowingTemperatureRange": [20, 35],
+    "rainTolerance": "high",
+    "notes": "Requires abundant water during growth period."
+  }
+]
+

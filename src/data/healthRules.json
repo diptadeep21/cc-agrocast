@@ -1,0 +1,23 @@
+{
+  "1": {
+    "category": "Good",
+    "recommendation": "Air quality is good. Outdoor activities safe."
+  },
+  "2": {
+    "category": "Fair",
+    "recommendation": "Minor impact for very sensitive groups."
+  },
+  "3": {
+    "category": "Moderate",
+    "recommendation": "Sensitive people should reduce prolonged outdoor exertion."
+  },
+  "4": {
+    "category": "Poor",
+    "recommendation": "Avoid strenuous outdoor activities."
+  },
+  "5": {
+    "category": "Very Poor",
+    "recommendation": "Wear respiratory protection and avoid outdoor work."
+  }
+}
+
