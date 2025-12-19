@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { fetchHistoricalWeather } from '../utils/FetchWeatherData';
 
 const WeatherCard = ({ currentWeather, cityName }) => {
 	const [formattedTime, setFormattedTime] = useState('');
@@ -38,6 +39,20 @@ const WeatherCard = ({ currentWeather, cityName }) => {
 			console.error('Error processing weather data:', error);
 		}
 	}, [currentWeather]);
+
+	const handleFetchHistoricalData = async () => {
+		try {
+			const date = Math.floor(Date.now() / 1000) - 86400; // 1 day ago
+			const historicalData = await fetchHistoricalWeather(
+				currentWeather.coord.lat,
+				currentWeather.coord.lon,
+				date
+			);
+			console.log('Historical Data:', historicalData);
+		} catch (error) {
+			console.error('Error fetching historical data:', error);
+		}
+	};
 
 	if (!currentWeather) {
 		return (
@@ -147,6 +162,15 @@ const WeatherCard = ({ currentWeather, cityName }) => {
 					</div>
 				</div>
 			)}
+
+			<div className="mt-6">
+				<button
+					onClick={handleFetchHistoricalData}
+					className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600"
+				>
+					View Historical Weather
+				</button>
+			</div>
 		</motion.div>
 	);
 };

@@ -187,3 +187,13 @@ export const fetchWeatherData = async ({
 		throw new Error(error.message || 'Failed to fetch weather data');
 	}
 };
+
+export async function fetchHistoricalWeather(lat, lon, date) {
+  const apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_KEY;
+  const url = `https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${lat}&lon=${lon}&dt=${date}&appid=${apiKey}`;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Failed to fetch historical weather data');
+  }
+  return response.json();
+}

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import CustomAlerts from '../components/CustomAlerts';
 
 export default function HomePage() {
 	return (
@@ -121,6 +122,9 @@ export default function HomePage() {
 						</div>
 					</motion.div>
 				</section>
+
+				{/* Custom Alerts Section */}
+				<CustomAlerts />
 			</main>
 			<Footer />
 		</div>
